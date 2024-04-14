@@ -1,0 +1,38 @@
+mkdir SI_2024_lab1_223181 - nova papka so ime SI_2024_lab1_223181
+cd SI_2024_lab1_223181 - so ovaa komanda vleguvame vo papkata
+git init - inizijalizacija na lokalno repo 
+git remote add origin 'https://github.com/Magnolija10/SI_2024_lab1_223181.git/' - so ovaa komanda gi povrzuvame lokalniot repozitorium so repozitoriumot na github 
+notepad README.md - pravime nova datoteka README.md
+git add README.md - novata datoteka e vo staged faza
+git commit -m "Initial commit" - pravime commit
+git add SILab1Main.java SILab1_1.java SILab1_2.java - staged faza 
+trite novi fileovi
+git commit -m "Add starter code" - pravime commit na novite fileovi 
+git push --all origin - go sinhronizirame lokalniot so remote repozitoriumot
+git checkout -b bug1 -  nova granka bug1 i se prefrlame na istata
+git add SILab1_1.java - otkako sme gi popravile greskite, go stavame fajlot vo staged faza
+git commit -m "Fix wrong condition in "filterOddLengthStrings" - pravime commit
+git checkout master-se prefrlame na grankata master
+git checkout -b bug2 -potoa se prefrlame na bug2, ja razgranuvame grankata bug2 od grankata master
+git add SILab1_2.java - otkako sme gi popravile greskite, go stavame fajlot vo staged faza
+git commit -m "Fix wrong condition in "Fix wrong condition in makeBigStringFrom" - pravime nov commit
+git checkout bug1 -potoa se prefrlame na bug1
+git add SILab1Main.java- pravime promena, pravime povik kon statickata funckcija
+git commit -m Call method filterOddLengthStrings in main class. -pravime komit so porakat "Call method filterOddLengthStrings in main class."
+git checkout bug2-se prefrlame na grankata bug2
+git add SILab1Main.java - nov povik kon statickata funkcija
+git commit -m Call method makeBigStringFrom in main class.- pravime commit so poraka
+git push --all - gi sinhronizirame site granki od lokalniot so remote repozitorium
+git checkout master - se prefrlame na master
+git merge bug1 - ja spojuvame grankata bug1 so master(FastForward)
+git push --all - gi sinhronizirame site granki od lokalniot so remote repozitorium
+git checkout bug2 - se prefrlame na bug2
+git rebase master - pravume rebase so grankata master, kade se javuva konflikt, koj go resavame.
+git add SILab1Main.java - go dodavame fileot vo staged fazata so koregiraniot konflikt
+git rebase --continue - rebase komandata prodolzuva, se pravi uspesen rebase od master kon bug2
+git checkout master - se prefrlame na master
+git merge bug2- ja spojuvame bug2 so grankata mster (FastForward)
+git push --all --force - site granki koi gi imame napraveno do sega na lokalniot repozitorium gi stavame prisilno na git
+git add logs.txt 223181.txt - gi dodavame vo staged fazata novute text fileovi
+git commit -m "Final commit" - pravime commit so poraka
+git push --all - gi sinhronizirame site granki od lokalniot so remote repozitorium
